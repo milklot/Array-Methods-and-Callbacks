@@ -48,12 +48,21 @@ console.log(getYears(getFinals(fifaData)));
 
 function getWinners(getFinals) {
 
-    let result = [];
+    let winners = [];
 
-
+    getFinals.forEach(data => {
+        if (data['Home Team Goals'] > data['Away Team Goals']) {
+            winners.push(data['Home Team Name']);
+        } else if (data['Home Team Goals'] < data['Away Team Goals']) {
+            winners.push(data['Away Team Name']);
+        }
+    });
+    return winners;
 };
 
-getWinners();
+
+
+console.log(getWinners(getFinals(fifaData)));
 
 /* Task 5: Implement a higher-order function called `getWinnersByYear` that accepts the following parameters and returns a set of strings "In {year}, {country} won the world cup!" 
 
