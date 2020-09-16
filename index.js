@@ -12,6 +12,60 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+//(a) Home Team name for 2014 world cup final
+function taskA(data) {
+    data.forEach(function(item) {
+        if (item['Year'] === 2014 && item['Stage'] === 'Final') {
+            console.log(item['Home Team Name']);
+        }
+    });
+}
+taskA(fifaData);
+
+
+//(b) Away Team name for 2014 world cup final
+function taskB(data) {
+    data.forEach(item => {
+        if (item['Year'] === 2014 && item['Stage'] === 'Final') {
+            console.log(item['Away Team Name']);
+        }
+    });
+}
+taskB(fifaData);
+
+
+//(c) Home Team goals for 2014 world cup final
+function taskC(data) {
+    data.forEach(item => {
+        if (item['Year'] === 2014 && item['Stage'] === 'Final') {
+            console.log(item['Home Team Goals']);
+        }
+    });
+}
+taskC(fifaData);
+
+
+//(d) Away Team goals for 2014 world cup final
+function taskD(data) {
+    data.forEach(item => {
+        if (item['Year'] === 2014 && item['Stage'] === 'Final') {
+            console.log(item['Away Team Goals']);
+        }
+    });
+}
+taskD(fifaData);
+
+//(e) Winner of 2014 world cup final */
+function taskE(data) {
+    data.forEach(item => {
+        if (item['Year'] === 2014 && item['Stage'] === 'Final' && (item['Home Team Goals'] > item['Away Team Goals'])) {
+            console.log(item['Home Team Name']);
+        } else if (item['Year'] === 2014 && item['Stage'] === 'Final' && (item['Home Team Goals'] < item['Away Team Goals'])) {
+            console.log(item['Away Team Name']);
+        }
+    });
+}
+taskE(fifaData);
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
