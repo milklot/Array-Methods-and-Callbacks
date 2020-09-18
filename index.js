@@ -23,6 +23,8 @@ function taskA(data) {
 taskA(fifaData);
 
 
+
+
 //(b) Away Team name for 2014 world cup final
 function taskB(data) {
     data.forEach(item => {
@@ -32,6 +34,7 @@ function taskB(data) {
     });
 }
 taskB(fifaData);
+
 
 
 //(c) Home Team goals for 2014 world cup final
@@ -54,6 +57,8 @@ function taskD(data) {
     });
 }
 taskD(fifaData);
+
+
 
 //(e) Winner of 2014 world cup final */
 function taskE(data) {
